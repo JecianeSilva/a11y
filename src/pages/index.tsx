@@ -2,10 +2,14 @@ import Image from 'next/image'
 import Logo from '../assets/logo.svg'
 
 import styles from '../styles/Home.module.css'
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Desenvolvendo uma web acessível | Rocketseat Blog</title>
+      </Head>
       <header className={styles.header}>
         <Image src={Logo} width={286/2} alt="Blog da Rocketseat" />
         <nav className={styles.nav}>
@@ -20,19 +24,18 @@ export default function Home() {
       <main>
         <article className={styles.content}>
           <header>
-            <h2>Desenvolvendo uma web acessível</h2>
-            <h4>Protocolos e diretrizes orientam o desenvolvimento de tecnologias acessíveis, mas é preciso olhar para além de tudo isso</h4>
+            <h1>Desenvolvendo uma web acessível</h1>
+            <h2>Protocolos e diretrizes orientam o desenvolvimento de tecnologias acessíveis, mas é preciso olhar para além de tudo isso</h2>
           </header> 
           <p>Acessibilidade se tornou uma tendência no ecossistema tecnológico mundial, diversas empresas passaram a adotar critérios de desenvolvimento acessível em seus projetos — por uma questão prática ou por exigências legais —, no entanto, ainda faltam recursos e consciência do que de fato é inclusivo na internet para pessoas com deficiências.</p>
           <p>Para abordar este tema, é preciso ter uma perspectiva cultural sobre o assunto, não encará-lo apenas na ótica técnica ou prática. Acessibilidade passou a ser vista como um desafio (ou tendência) para o ecossistema tech e não como filosofia natural daquilo que condiz com os princípios básicos da web: acessível para humanos. Tal afirmação está na W3C.</p>
-          
-          <h3>O que é acessibilidade, afinal?</h3>
+          <h2>O que é acessibilidade, afinal?</h2>
         </article>
       </main>
       <footer className={styles.footer}>
         <Image src={Logo} width={286/2} alt="Blog da Rocketseat" />
         <nav className={styles.nav} aria-label='Rodapé'>
-          <a href="">Termo de uso</a>
+          <a href="#terms">Termo de uso</a>
         </nav>
       </footer>
     </>
